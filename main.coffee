@@ -39,3 +39,7 @@ describe 'sinonChai', ->
     hello "foo", cb
 
     cb.should.have.been.calledWith "hello foo"
+
+if typeof window isnt 'undefined'
+  mocha.checkLeaks();
+  mocha.run()
