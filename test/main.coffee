@@ -14,11 +14,11 @@ if typeof window is 'undefined'
   inside 'sinonChai', we require 'sinon-chai'
   inside 'pkg', we require '../package.json'
   inside 'multiplexer', we require "../#{ pkg.main }"
+  chai.use sinonChai
 
 getARandomString = -> Math.random().toString(36).replace(/[^a-zA-Z]+/g, '')
 
 chai.should()
-chai.use sinonChai
 
 
 describe 'fakeTest', ->
