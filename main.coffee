@@ -16,10 +16,12 @@ if typeof window is 'undefined'
   inside 'multiplexer', we require "../#{ pkg.main }"
   chai.use sinonChai
 
+else
+  mocha.setup 'bdd'
+
 getARandomString = -> Math.random().toString(36).replace(/[^a-zA-Z]+/g, '')
 
 chai.should()
-
 
 describe 'fakeTest', ->
 
