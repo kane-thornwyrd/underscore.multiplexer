@@ -12,5 +12,10 @@ When you want a function to accept a single set of arguments or multiple sets ! 
 Examples
 --------
 
+```javascript
+// TODO
+```
+
+
 [Tests suite](http://kane-thornwyrd.github.io/underscore.multiplexer)
 --------
