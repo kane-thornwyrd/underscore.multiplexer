@@ -33,7 +33,7 @@
   <script defer async type="text/coffeescript" src="./main.coffee"></script>
   <script type="text/javascript">
     $(function(){
-      $.ajax('https://cdn.rawgit.com/kane-thornwyrd/underscore.multiplexer/master/README.md')
+      $.ajax('https://raw.githubusercontent.com/kane-thornwyrd/underscore.multiplexer/master/README.md')
        .done(function(data, textStatus, jqXHR){
          $('#readme-rendered').html(marked(data));
        })
