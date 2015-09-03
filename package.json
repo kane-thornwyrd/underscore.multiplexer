@@ -34,12 +34,9 @@
   "homepage": "http://kane-thornwyrd.github.io/underscore.multiplexer",
   "devDependencies": {
     "browser-sync": "^2.8.2",
-    "browserify": "^11.0.1",
     "chai": ">=1.9.2 <4",
     "coffee-script": ">=1.9.3 <2",
-    "coffeeify": "^1.1.0",
     "coveralls": "^2.11.4",
-    "del": "^2.0.0",
     "docco": "^0.7.0",
     "gulp": "^3.9.0",
     "gulp-cog": "^0.1.2",
@@ -55,19 +52,11 @@
     "istanbul": "^0.3.19",
     "jquery": "^2.1.4",
     "mocha": "^2.3.0",
-    "mocha-phantomjs": "^3.6.0",
-    "phantomjs": "^1.9.7-15",
     "sinon": ">=1.4.0 <2",
-    "sinon-chai": "^2.8.0",
-    "vinyl-source-stream": "^1.1.0"
+    "sinon-chai": "^2.8.0"
   },
   "dependencies": {
     "underscore": "^1.8.3"
   },
-  "readmeFilename": "README.md",
-  "browserify": {
-    "transform": [
-      "coffeeify"
-    ]
-  }
+  "readmeFilename": "README.md"
 }
