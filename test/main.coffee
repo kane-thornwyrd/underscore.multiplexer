@@ -39,7 +39,6 @@ describe 'TestsTests', ->
     true.should.be.equal true
 
   it 'Should be able to use Sinon spies', ->
-
     hello = (name, cb)->
       cb "hello " + name
 
@@ -63,20 +62,23 @@ describe 'Underscore.multiplexer', ->
     cb.should.have.been.calledWith arg
 
   it 'Should call it for each argument after it ! (1 argument = 1 call)', ->
-    rng = Math.floor(Math.random() * 20)
+    rng = Math.floor(Math.random() * 20)+1
     cb = sinon.spy()
-    args = [cb]
-    args.push getARandomString() for [0..rng-1]
-    _.multiplexer.apply @, args
+
+    for [1..rng]
+      arg = getARandomString()
+      _.multiplexer cb, arg
+
     cb.callCount.should.equal rng
 
   it 'Should call it for each argument after it ! (each argument is passed to the callback)', ->
-    rng = Math.floor(Math.random() * 20)
+    rng = Math.floor(Math.random() * 20)+1
     cb = sinon.spy()
-    args = [cb]
-    args.push getARandomString() for [0..rng-1]
-    _.multiplexer.apply @, args
-    cb.should.have.been.calledWith args[index] for index in [0..rng]
+
+    for [1..rng]
+      arg = getARandomString()
+      _.multiplexer cb, arg
+      cb.should.have.been.calledWith arg
 
 if isBrowser
   mocha.checkLeaks();
