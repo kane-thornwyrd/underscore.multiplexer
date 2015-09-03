@@ -1,0 +1,73 @@
+{
+  "name": "underscore.multiplexer",
+  "version": "0.0.1",
+  "description": "When you want a function to accept a single or multiple set of arguments ! (think about factory functions)",
+  "main": "underscore.multiplexer.js",
+  "scripts": {
+    "test": "istanbul cover --print both node_modules/mocha/bin/_mocha -- --compilers coffee:coffee-script/register --reporter spec test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kane-thornwyrd/underscore.multiplexer.git"
+  },
+  "keywords": [
+    "underscore",
+    "mixin",
+    "plugin",
+    "multiplexing",
+    "callback",
+    "parameters"
+  ],
+  "author": {
+    "name": "Jean-cédric THEROND",
+    "email": "jean.cedric.t@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "GPL v3+",
+      "url": "https://gnu.org/licenses/gpl.html"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/kane-thornwyrd/underscore.multiplexer/issues"
+  },
+  "homepage": "http://kane-thornwyrd.github.io/underscore.multiplexer",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "browserify": "^11.0.1",
+    "chai": ">=1.9.2 <4",
+    "coffee-script": ">=1.9.3 <2",
+    "coffeeify": "^1.1.0",
+    "coveralls": "^2.11.4",
+    "del": "^2.0.0",
+    "docco": "^0.7.0",
+    "gulp": "^3.9.0",
+    "gulp-cog": "^0.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-environments": "^0.1.0",
+    "gulp-foreach": "^0.1.0",
+    "gulp-mocha-phantomjs": "^0.10.1",
+    "gulp-packages": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.0",
+    "gulp-util": "^3.0.6",
+    "istanbul": "^0.3.19",
+    "jquery": "^2.1.4",
+    "mocha": "^2.3.0",
+    "mocha-phantomjs": "^3.6.0",
+    "phantomjs": "^1.9.7-15",
+    "sinon": ">=1.4.0 <2",
+    "sinon-chai": "^2.8.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "readmeFilename": "README.md",
+  "browserify": {
+    "transform": [
+      "coffeeify"
+    ]
+  }
+}

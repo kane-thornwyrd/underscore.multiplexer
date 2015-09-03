@@ -1,0 +1,61 @@
+{
+  "watch" : {
+    "root": "./test/",
+    "index": "index.html"
+  },
+  "documentation": {
+    "watch"      : ["./src/**/*.js"],
+    "src"       : "./src/**/*.js",
+    "dest"      : "./documentation",
+    "cmd"       : "docco -o ./documentation -m .markedrc -- ./src/**/*.js",
+    "cleanGlob" : ["./documentation/**","!./documentation"]
+  },
+  "javascript": {
+    "watch"      : ["./src/js/**/*.js"],
+    "src"        : "./src/js/**/*.js",
+    "dest"       : "./",
+    "masterName" : "index.js",
+    "minExt"     : ".min.js",
+    "sourcemaps" : {
+      "conf": {
+        "loadMaps" : true
+      },
+      "dest" : "./"
+    },
+    "uglify" : {
+      "cleanConf" : {
+        "compress" : false,
+        "mangle"   : false,
+        "output"   : {
+          "beautify"     : true,
+          "indent_level" : 2,
+          "quote_keys"   : true,
+          "max_line_len" : 130,
+          "bracketize"   : true
+        }
+      },
+      "minConf"   : {
+        "preserveComments" : "license",
+        "compress"         : {
+          "unsafe"     : true,
+          "hoist_vars" : true
+        }
+      }
+    }
+  },
+  "browserify": {
+    "watch": ["./src/js/**/*.js", "./test/*.coffee"],
+    "src": "./test/main.coffee",
+    "dest": "./test/",
+    "output": "required.js"
+  },
+  "mochaPhantom": {
+    "watch": ["./src/js/**/*.js", "./test/*.coffee"],
+    "src": "./test/localtest.html"
+  },
+  "copyToTest": {
+    "watch": ["./src/js/**/*.js", "./test/*.coffee"],
+    "src": "<%= main %>",
+    "dest": "./test/"
+  }
+}
