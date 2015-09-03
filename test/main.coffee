@@ -25,9 +25,15 @@ chai.should()
 
 describe 'fakeTest', ->
 
-  it 'should success', ->
+  it 'Should success', ->
     true.should.be.equal true
 
+  it 'Should be able to call the fakeFunction', ->
+    (typeof fakeFunction).should.equal 'function'
+
+  it 'Should call fakeFunction with an argument which will be returnedd as-is.', ->
+    arg = getARandomString();
+    fakeFunction(arg).should.be.equal arg
 
 describe 'sinonChai', ->
 
@@ -43,5 +49,5 @@ describe 'sinonChai', ->
     cb.should.have.been.calledWith "hello foo"
 
 if typeof window isnt 'undefined'
-  mocha.checkLeaks();
+  # mocha.checkLeaks();
   mocha.run()
